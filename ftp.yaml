@@ -1,0 +1,10 @@
+---
+- name: installing few patches
+  hosts: workstation.lab.example.com
+  become: true
+  tasks:
+  - name: install ftp packages
+    yum:
+      name: vsftpd
+      state: latest
+
